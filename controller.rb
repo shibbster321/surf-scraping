@@ -18,9 +18,8 @@ class Controller
     def create
       # ask user for recipe and description
       name = @view.ask_name
-      description = @view.ask_description
       # make new recipe instance 
-      recipe = Recipe.new(name, description)
+      recipe = Report.new({location: name})
       # put new recipe into repository
       @repository.add_recipe(recipe)
       
